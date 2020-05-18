@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Feedback form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h1{
+        font-family: cursive;
+
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="offset-md-3 col-md-6">
+            {% csrf_token %}
+            {% if feedback %}
+                <h1>Feedback are.....</h1>
+                {% for i in feedback %}
+                    {% if i.ratting >= 5 and i.ratting <= 10 %}
+                    First Name:{{ i.First_name |capfirst }}<br>
+                    Last Name:{{ i.Last_name }}<br>
+                    Email Id:{{ i.Email }}<br>
+                    Mobile Number:{{ i.Mobile }}<br>
+                    ratting:{{ i.ratting }}<br>
+                    Feedback:{{ i.Feedback }}<br><br>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <h1>Data not available</h1>
+            {% endif %}
+
+
+        <form method="Post">
+            <h1 class="text-center">Enter your feedback...</h1>
+            {% csrf_token %}
+            {{ fform }}
+            <center>
+            <input type="submit" value="Submit" class="btn btn-success">
+            <input type="reset" value="Clear" class="btn btn-danger">
+            </center>
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

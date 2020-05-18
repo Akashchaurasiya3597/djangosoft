@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Create page</title>
+    {% load static %}
+    {% include 'bootstrapline.html' %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/createpage.css' %}">
+
+
+</head>
+<br>
+<body style="background-color: #e2bcd0;">
+<div class="container" style="border: 1px solid cornflowerblue">
+    <h2 class="Text-center">Create Event form</h2>
+    <a href="/" class="btn btn-outline-info text-white" style="margin-left: 1000px" >Back</a>
+    <div class="row">
+        <div class="offset-md-2 col-md-8">
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+                {{ insert.as_p }}
+
+
+                <center>
+                    <input type="submit"  value="Submit"  class="btn btn-success">
+                    <input type="reset"  value="Clear"  class="btn btn-danger">
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

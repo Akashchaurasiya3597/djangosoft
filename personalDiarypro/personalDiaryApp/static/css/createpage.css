@@ -1,0 +1,35 @@
+input[type=text], select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=file], select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit1] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 10px;
+  margin: 0px 0;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+

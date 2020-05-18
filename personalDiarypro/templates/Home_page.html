@@ -1,0 +1,69 @@
+{% load static %}
+<html>
+<head>
+    <title>home page</title>
+    {% include 'bootstrapline.html' %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <style>
+        body{
+            background-color: #e2bcd0;
+        }
+        .card{
+            height: 500px;
+            width: 500px;
+            background-color: #8befd9;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md">
+            <div class="card"style="margin-left: 450px;border: 1px solid cornflowerblue;background-color: #e2bcd0">
+                <div class="card-header">
+                    <div class="btn-group">
+                    <a href="/insert/" class="btn btn-outline-info text-white" style="margin-left: 300px" >Create Event Page</a>
+                    </div>
+                    <img src="{% static 'images/girl_diary.jpg' %}" id="img1"style="border:2px solid cornflowerblue">
+
+                </div>
+                <div class="body"style="border:1px solid cornflowerblue">
+                    <a href="/diary/" class="text-center text-white"><h2>Akash Chaurasiya</h2></a>
+                    <p class="text-white text-center">Success doesn’t just find you. You have to go out and get it.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md">
+                            <a href="https://www.facebook.com/akkisky.chaurasiya.1" ><img src="{% static 'images/facebook-icon.png' %}" style="height: 30px;width: 25px; margin-left: 5px;"></a>
+                        </div>
+
+                        <div class="col-md">
+                        <a href="https://www.instagram.com/p/B54zUJRjTM2pxRFl_d62hPFb2hPjsIC5rBmenE0/?igshid=1v9h4xxjgck8s"> <img src="{% static 'images/instagram-icon.png' %}" style="height: 25px;width: 25px; margin-left: 5px;  ">
+                        </a></div>
+
+                        <div class="col-md">
+                        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC-Q7atG2BMO1QovSCaywD8Q%3Ffbclid%3DIwAR38Fzd6pKtN8VcMDjOnlI80D0APTdSN73Tc9urxkmASEn110ddg8lZQ4F8&h=AT0BTuWubPqRN7LLXPzLE4l0_09r0U_QUeXCl5KjdNmtn_t_Q4TDukoBYREX-q4KXqBOmoppXoO6q9jpBmaBANC0rUObSl29xKf0l7EUDgZHCmmvuloVIlcv4WT98V76why0"> <img src="{% static 'images/youtube-icon.png' %}" style="height: 25px;width: 25px;margin-left: 5px;"></a>
+                        </div>
+
+                        <div class="col-md">
+                         <img src="{% static 'images/twitter-icon.png' %}" style="height: 25px;width: 25px;margin-left: 5px;">
+                        </div>
+
+                        <div class="col-md">
+                        <img src="{% static 'images/linkedin-icon.png' %}" style="height: 25px;width: 25px;margin-left: 5px;">
+                        </div>
+
+
+
+                </div>
+
+             </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

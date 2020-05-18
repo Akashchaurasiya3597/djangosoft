@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Customer page</title>
+    {% load static %}
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ aform.as_p }}
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

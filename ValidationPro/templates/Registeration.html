@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Registeration</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        input[type=email], select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+        input[type=text], select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid cornflowerblue;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit1] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 7px 10px;
+  margin: 0px 0;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="container ">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 bg-info">
+            <h1 class="text-center">Registeration form</h1>
+            <form method="post"><input type='hidden'/>
+            {% csrf_token %}
+            {{ Rform }}
+            <center>
+                <input type="submit" value="submit" class="btn btn-success">
+                <input type="reset" value="clean" class="btn btn-danger">
+            </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
